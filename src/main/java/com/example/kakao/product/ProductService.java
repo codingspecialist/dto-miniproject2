@@ -14,13 +14,13 @@ public class ProductService {
 
     private final ProductJPARepository productJPARepository;
 
-    // (기능2) 상품 상세보기
-    public ProductResponse.FindByIdDTO findById(int id) {
+    // (기능1) 상품 목록보기
+    public List<ProductResponse.FindAllDTO> findAll(int page) {
         return null;
     }
 
-    // (기능1) 상품 목록보기
-    public List<ProductResponse.FindAllDTO> findAll(int page) {
+    // (기능2) 상품 상세보기
+    public ProductResponse.FindByIdDTO findById(int id) {
         return null;
     }
 }

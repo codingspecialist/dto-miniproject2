@@ -24,9 +24,8 @@ public class UserService {
     }
 
     public User login(UserRequest.LoginDTO requestDTO) {
-        User userPS = userJPARepository.findByEmail(requestDTO.getEmail()).orElseThrow(
-                () -> new Exception400("이메일을 찾을 수 없습니다 : "+requestDTO.getEmail())
-        );
+        User userPS = userJPARepository.findByEmail(requestDTO.getEmail())
+            .orElseThrow(()-> new Exception400("email을 찾을 수 없습니다 : "+requestDTO.getEmail()));
         return userPS;
     }
 }

@@ -1,7 +1,7 @@
 package com.example.kakao.user;
 
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
+
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;

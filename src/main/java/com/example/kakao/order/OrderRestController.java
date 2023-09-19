@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,11 +34,11 @@ public class OrderRestController {
 
     // (기능5) 주문결과 확인
     @GetMapping("/orders/{id}")
-    public ResponseEntity<?> findById() {
+    public ResponseEntity<?> findById(@PathVariable Integer id) {
         return null;
     }
 
-    // (기능4) 주문상품 정보조회 (유저별)
+    // (기능4) 주문상품 정보조회 (유저별) - 장바구니 내역 가져오기
     @GetMapping("/orders")
     public ResponseEntity<?> findAllByUser() {
         return null;
