@@ -7,6 +7,7 @@ import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "option_tb")
 @Entity
 public class Option {
 
