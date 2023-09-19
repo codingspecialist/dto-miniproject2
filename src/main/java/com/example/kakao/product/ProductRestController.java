@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.kakao._core.utils.ApiUtils;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -17,7 +19,7 @@ public class ProductRestController {
     // (기능1) 상품 목록보기
     @GetMapping("/products")
     public ResponseEntity<?> findAll(@RequestParam(value = "page", defaultValue = "0") Integer page) {
-        return null;
+        return ResponseEntity.ok().body(ApiUtils.success(null));
     }
 
     // (기능2) 상품 상세보기
