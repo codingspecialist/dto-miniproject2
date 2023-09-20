@@ -1,6 +1,8 @@
 package com.example.kakao.product.option;
 
 import com.example.kakao.product.Product;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.*;
 
 import javax.persistence.*;
@@ -15,6 +17,7 @@ public class Option {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @JsonIgnoreProperties({"options"})
     @ManyToOne(fetch = FetchType.LAZY)
     private Product product;
 

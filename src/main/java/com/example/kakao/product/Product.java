@@ -26,7 +26,7 @@ public class Product {
     private String image;
     private int price; // 톡딜가
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
     private List<Option> options = new ArrayList<>();
 
     @Builder

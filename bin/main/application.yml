@@ -27,10 +27,13 @@ spring:
       hibernate:
         format_sql: true
       default_batch_fetch_size: 100
-    open-in-view: false
+    open-in-view: true
   output:
     ansi:
       enabled: always
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
 
 logging:
   level:
