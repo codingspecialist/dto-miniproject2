@@ -50,12 +50,12 @@ public class ProductResponse {
 
         @Getter
         @Setter
-        public class OptionDTO {
+        class OptionDTO {
             private Integer optionId;
             private String optionName;
             private Integer optionPrice;
 
-            public OptionDTO(Option option) {
+            OptionDTO(Option option) {
                 this.optionId = option.getId();
                 this.optionName = option.getOptionName();
                 this.optionPrice = option.getPrice();
@@ -88,12 +88,12 @@ public class ProductResponse {
 
         @Getter
         @Setter
-        public class OptionDTO {
+        class OptionDTO {
             private Integer optionId;
             private String optionName;
             private Integer optionPrice;
 
-            public OptionDTO(Option option) {
+            OptionDTO(Option option) {
                 System.out.println("이제 Lazy Loading 시작됨 =========");
                 this.optionId = option.getId();
                 this.optionName = option.getOptionName();
@@ -127,12 +127,12 @@ public class ProductResponse {
 
         @Getter
         @Setter
-        public class OptionDTO {
+        class OptionDTO {
             private Integer optionId;
             private String optionName;
             private Integer optionPrice;
 
-            public OptionDTO(Option option) {
+            OptionDTO(Option option) {
                 this.optionId = option.getId();
                 this.optionName = option.getOptionName();
                 this.optionPrice = option.getPrice();
