@@ -29,6 +29,10 @@ public class Product {
     @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
     private List<Option> options = new ArrayList<>();
 
+    public void addOption(Option option){
+        options.add(option);
+    }
+
     @Builder
     public Product(int id, String productName, String description, String image, int price) {
         this.id = id;
